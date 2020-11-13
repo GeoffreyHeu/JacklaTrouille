@@ -4,12 +4,23 @@ ArrayList<Orb> my_orbs;
 
 long time_counter;
 
+PFont myFont;
+
+int score;
+
 void setup() //On initialise la fenêtre
 {
   size(1200, 720);
   background = loadImage("resources/training_background.png");
   my_orbs = new ArrayList();
   time_counter = millis();
+  
+  score = 0;
+  
+  surface.setTitle("JackLaTrouille MiniGame");
+  surface.setResizable(true);
+  surface.setLocation(100, 100);
+  
 }
 
 void draw() //On dessine dans la fenêtre
@@ -49,6 +60,11 @@ void Spawn()
   
   time_counter = millis() + 1500;
   }
+}
+
+void GameOver()
+{
+  
 }
 
 void mousePressed()

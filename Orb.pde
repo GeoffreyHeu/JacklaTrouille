@@ -54,6 +54,7 @@ class Orb
       return 2;
     }
     
+    cursor(HAND);
     return 0;
   }
   
@@ -65,6 +66,7 @@ class Orb
         && mouseY < position_y + orb_size)
     {
       clicked = true;
+      cursor(CROSS);
     } 
     else
     {
